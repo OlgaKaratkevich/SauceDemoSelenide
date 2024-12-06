@@ -51,7 +51,7 @@ public class AuthTest extends BaseTest{
         open("https://www.saucedemo.com/");
         $("#user-name").setValue(login);
         $("#password").setValue(password).pressEnter();
-        String textOfMessage = $x("//h3[@data-test = 'error']").getText();
-        Assertions.assertEquals(errorMessage, textOfMessage);
+        String messageText = $x("//h3[@data-test = 'error']").getText();
+        Assertions.assertEquals(errorMessage, messageText);
     }
 }
